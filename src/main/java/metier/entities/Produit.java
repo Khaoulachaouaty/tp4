@@ -16,6 +16,20 @@ private Long idProduit;
 @Column (name="NOM_PRODUIT")
 private String nomProduit;
 private double prix;
+private Categorie categorie;
+public Produit(String nomProduit, double prix,Categorie cat) {
+
+super();
+this.nomProduit = nomProduit;
+this.prix = prix;
+this.setCategorie(cat);
+}
+public Categorie getCategorie() {
+return categorie;
+}
+public void setCategorie(Categorie categorie) {
+this.categorie = categorie;
+}
 public Produit() {
 super();
 }
